@@ -1,0 +1,103 @@
+body{
+    background-image: url(sky.jpg);
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+p{
+    text-align: center;
+    color: rgb(214, 228, 59);
+    transition-property:all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 1s; 
+}
+p:hover{
+    transform: scale(0.8) rotate(0deg) skew(0deg) translate(0);
+
+ }
+
+.roadimg{
+    /* background-image: url("road.jpg"); */
+    /* width: 50%;
+    height: 30%; */
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat:repeat-x;
+    animation: movroad 4s linear infinite;
+ 
+
+}
+.cityimg{
+position: absolute;
+bottom: 45%;
+left: 0;
+/* animation: movcity 8s linear infinite; */
+display: block;
+
+
+}
+.carimg{
+position: absolute;
+bottom: 35%;
+left: 35%;
+width: 30%;
+height: 30%;
+z-index: 3;
+animation:movcar 1s linear infinite;
+}
+
+.wheelimg1
+{
+   width:62px;
+   height: 65px;
+   position: absolute;
+   bottom:40%;
+   left:38%;
+animation: movwheel1 2s linear infinite;
+
+}
+.wheelimg2
+{
+   width:62px;
+   height: 65px;
+   position: absolute;
+   bottom:40%;
+   left:56%;
+   animation: movwheel2 2s linear infinite;
+
+
+
+}
+@keyframes movroad {
+    100%{transform: translateX(-2500px);}
+    
+}
+@keyframes movcar {
+
+    100%{
+        transform: translateY(-1px);
+    }
+50%{
+    transform: translateY(3px);
+}
+0%{
+
+    transform: translateY(-1px);
+}
+}
+@keyframes movwheel1{
+    100%{transform: rotate(360deg);
+}
+}
+@keyframes movwheel2{
+    100%{transform: rotate(360deg);
+}
+}
+/* @keyframes movcity{
+    100%{transform: translateX(-100px);
+} */
+/* } */
